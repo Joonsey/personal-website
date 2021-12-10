@@ -9,8 +9,14 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import json
 import os 
 from pathlib import Path
+
+with open('/etc/config.json') as config_file:
+	config = json.load(config_file)
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-kqwm^y&oj&-s2kh39r(1#@t(ujv-wucv-28q57oof#izyrt#$g'
+SECRET_KEY = config['SECRET_KEY']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["139.162.160.227","jaes.life"]
 
@@ -125,3 +132,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#EMAIL_POST = 587
+#EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = config['EMAIL_USER']
+#EMAIL_HOST_PASSWORD = config['EMAIL_PASS']
