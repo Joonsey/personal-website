@@ -89,12 +89,13 @@ nav {
 .about-section {
     display:flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .about-header {
     height: 100vh;
     background-color: var(--second-color);
-    width: 50%;
+    width: clamp(500px, 50%, 50%);
     display: flex;
     justify-content: center;
 }
@@ -102,7 +103,7 @@ nav {
     background-color: inherit;
 }
 .about-text {
-    width: 50%;
+    width: clamp(500px, 50%, 100%);
     height: 100vh;
     background-color: var(--main-color);
 }
