@@ -17,7 +17,7 @@ try:
     with open('/etc/config.json') as config_file:
 	    config = json.load(config_file)
 except:
-    from secrets import config
+    from non_server_secrets import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
