@@ -16,6 +16,7 @@
     margin:0;
     width:100vw;
     height:100vh;
+    overflow-x: hidden
 }
 
 .redacted {
@@ -46,11 +47,14 @@
 
 nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0;
 }
 
 nav ul li{
     display:inline;
+    margin: 0
+    
 }
 
 nav ul li a{
