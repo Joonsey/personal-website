@@ -10,11 +10,13 @@
     color:var(--main-color);
     font-family: 'Readex Pro', sans-serif;
     background-color: var(--main-bg-theme);
+
+    padding:0;
+    margin: 0;
 }
 
 .top-section {
     margin:0;
-    width:100vw;
     height:100vh;
     overflow-x: hidden
 }
@@ -23,8 +25,11 @@
     font-family: 'Redacted', cursive;
 }
 
-.top-section h1 {
+.cursive {
     font-family: 'Caveat', cursive;
+}
+
+.top-section h1 {
     font-size: 7vh;
     color: var(--second-color);    
 }
@@ -74,4 +79,36 @@ nav {
     transform: translateY(-50%);
     left: 50%;
     transform: translateX(-50%);
+}
+
+.about-section, .about-header, .about-text {
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.about-header {
+    height: 100vh;
+    background-color: var(--second-color);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.about-header * {
+    background-color: inherit;
+}
+.about-text {
+    width: 50%;
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+.about-header h1 {
+    position: relative;
+    top: 50%;
+    height: 200px;
 }
