@@ -127,10 +127,18 @@ nav {
     padding-left: 40px;
 }
 
-.section-header h1 {
+.section-header .header{
     position: relative;
     top: 50%;
     height: 200px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header p {
+    color: var(--main-bg-theme);
 }
 
 /* WORK SECTION DESIGN */
