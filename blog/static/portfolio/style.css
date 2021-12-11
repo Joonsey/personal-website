@@ -3,9 +3,24 @@
 
 :root {
     --main-color: whitesmoke;
-    --main-bg-theme: rgb(49, 49, 49);
-    --second-color: rgb(255, 58, 58);
-    --second-bg-color: black
+
+    /* RED AND SLATE THEME */
+
+    --main-bg-theme: rgb(49, 49, 49); 
+    --second-color: rgb(240, 99, 99); 
+    --second-bg-color: #070B0D; 
+    
+    /* YELLOW AND GRAY THEME */
+    
+    /* --main-bg-theme: #666E73;
+    --second-color: #F2E205;
+    --second-bg-color: #070B0D; */
+    
+    /* BLUE AND LIGHT GRAY THEME */
+    
+    /* --main-bg-theme: #8F8EBF;
+    --second-color: #474073;
+    --second-bg-color: #262626; */
 }   
 
 * {
