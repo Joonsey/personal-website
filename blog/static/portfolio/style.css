@@ -143,15 +143,23 @@ nav {
 
 .work-content {
     padding: 0;
+    display:flex;
+    justify-content: center;
+    position:relative;
 }
 
 .work-content img {
+
     object-fit: cover;
     width: 100%
 }
 
 .work-content h1 {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: underline var(--second-color);
 }
 
 
