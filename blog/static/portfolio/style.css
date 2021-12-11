@@ -1,3 +1,6 @@
+
+/* VARIABLES AND DEFAULTS */
+
 :root {
     --main-color: whitesmoke;
     --main-bg-theme: rgb(49, 49, 49);
@@ -14,7 +17,7 @@
     padding:0;
     margin: 0;
 }
-
+/* TOP SECTION AND HELPERS */
 .top-section {
     margin:0;
     height:100vh;
@@ -50,7 +53,7 @@
     transform: translateX(-50%);
 }
 
-
+/* NAVBAR DEFINITION */
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -73,7 +76,7 @@ nav ul li a:hover {
 }
 
 nav {
-    width: clamp(200px, 50vw, 400px);
+    width: clamp(300px, 50vw, 400px);
     position: absolute;
     margin:0;
     bottom: 0%;
@@ -81,19 +84,20 @@ nav {
     left: 50%;
     transform: translateX(-50%);
 }
+/* ABOUT AND SECTION DEFINITION */
 
-.about-section, .about-header, .about-text {
+.section, .section-header, .about-text {
     margin: 0;
     padding: 0;
 }
 
-.about-section {
+.section {
     display:flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.about-header {
+.section-header {
     height: 100vh;
     background-color: var(--second-color);
     width: 50%;
@@ -102,7 +106,7 @@ nav {
     position: sticky;
     top: 0;
 }
-.about-header * {
+.section-header * {
     background-color: inherit;
 }
 .about-text {
@@ -123,16 +127,48 @@ nav {
     padding-left: 40px;
 }
 
-.about-header h1 {
+.section-header h1 {
     position: relative;
     top: 50%;
     height: 200px;
 }
 
+/* WORK SECTION DESIGN */
+.work-container {
+    width: 50%;
+    /* background-color: var(--second-bg-color); */
+    display:flex;
+    flex-direction: column;
+}
 
+.work-content {
+    padding: 0;
+}
+
+.work-content img {
+    object-fit: cover;
+    width: 100%
+}
+
+
+.second-color-bg {
+    background-color: var(--main-color);
+}
+
+.second-color-txt {
+    color:black
+}
+
+
+
+
+
+
+
+/* MEDIA QUERY */
 @media screen and (max-width: 1000px) {
 
-    .about-header, .about-text {
+    .section-header, .about-text, .work-container{
         width: 100%;
         position: static;
     }
