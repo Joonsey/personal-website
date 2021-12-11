@@ -193,4 +193,8 @@ nav {
         position: static;
     }
 
+    .work-content h1 {
+        font-size: 18px;
+    }
+
 }
