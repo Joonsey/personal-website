@@ -191,13 +191,21 @@ nav {
     padding-top: 150px;
 }
 
-.contact-container ul {
+.mail-ref {
+    color:var(--second-color)
+}
+
+.mail-ref:hover {
+    text-decoration: underline;
+    color: var(--second-color)
+}
+
+.contacts {
     list-style: none;
     display:flex;
     justify-content: center;
 }
-
-.contact-container ul li {
+.contacts li {
     margin:8px;
 }
 
