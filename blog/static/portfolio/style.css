@@ -2,14 +2,14 @@
     --main-color: whitesmoke;
     --main-bg-theme: rgb(49, 49, 49);
     --second-color: rgb(255, 58, 58);
-
+    --second-bg-color: black
 }   
 
 * {
     box-sizing: border-box;
     color:var(--main-color);
     font-family: 'Readex Pro', sans-serif;
-    background-color: var(--main-bg-theme);
+    background-color: none;
 
     padding:0;
     margin: 0;
@@ -18,7 +18,8 @@
 .top-section {
     margin:0;
     height:100vh;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-image: radial-gradient(var(--main-bg-theme), var(--second-bg-color)) ;
 }
 
 .redacted {
@@ -98,14 +99,28 @@ nav {
     width: 50%;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
 }
 .about-header * {
     background-color: inherit;
 }
 .about-text {
     width: 50%;
-    height: 100vh;
+    height: auto;
     background-color: var(--main-color);
+    padding:48px
+}
+.about-text * {
+    color: black;
+}
+
+.about-text p {
+    padding: 10px
+}
+
+.about-text ul {
+    padding-left: 40px;
 }
 
 .about-header h1 {
@@ -118,7 +133,8 @@ nav {
 @media screen and (max-width: 1000px) {
 
     .about-header, .about-text {
-        width: 100%
+        width: 100%;
+        position: static;
     }
 
 }
