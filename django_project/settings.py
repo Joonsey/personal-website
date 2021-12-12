@@ -40,6 +40,7 @@ ALLOWED_HOSTS = ["139.162.160.227","jaes.life",'127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'article.apps.ArticleConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',

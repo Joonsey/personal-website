@@ -1,0 +1,68 @@
+{% extends "article/base.html" %}
+{% block content %}
+<h1>A beginners endevour into Machine Learning</h1>
+
+<p><b>Quick disclaimer:</b> I am by no means an expert, I am a self-studying enthusiast. <br>
+My opinions are merely my own experience and observations.</p>
+
+<h2>What is really machine learning?</h2>
+
+<p><b>Machine Learning</b> are algorythms that train on data often to find <i>(or exclude)</i> correlations in data points, 
+an example that is relatively easy to understand is that you have a dataset of two-dimensional numbers <i>(they look like this for instance: (12,-9))</i>
+and then you try to find the correlation between them. What will Y be given X. <i>(Y, X)</i> <br>So really Machine Learning is kind of like a geometry problem.
+</p>
+<p>In the previous specific example we can use something called a Linear Regression, which is a very common technique.</p>
+<p>A Linear Regression technique is often used in situations like these where we attempt to find the correlation between values.
+    It simply tries to draw a line in the 2 dimentional space of datapoints, and attempts to make it fit the data as good as it can, <i>(this is sometimes reffered to as "finding the line of best fit".)</i>
+</p>
+<p>If you google: "How to do a linear regression". You will likely be thrown off by the amount of weird and unique words and terms thrown around, like:</p>
+<ul>
+    <li><b>fit</b> how close your estimation is to the true value.</li>
+    <li><b>overfitting</b> the issue that arrises when your algorythm is "too good" at your <i>specific</i> training dataset and it's logic no longer applies to real examples.</li>
+    <li><b>underfitting</b> it's simply not done training.</li>
+    <li><b>loss-function</b> the method that choses how your algorythm should calculate how incorrect it is.</li>
+    <li><b>activation-function</b> a function that can be added to increase complexity, effectively makes the machine have to make a logic based choice. </li>
+    <li><b>neural network</b> a network of values the X will be given to produce estimate Y <i> (also called Y-hat).</i></li>
+    <li><b>layer</b> a layer in the neural network, usually input layer or output layer. the size of these are cruical and are determined by your dataset</li>
+    <li><b>hidden layer</b> a layer in the neural network, this is where the magic happens. the size of these are hyperparameters. <i>(they are up to the developers intuition).</i></li>
+    <li><b>stochastic</b> literally just strange word for random.</li>
+    <li><b>accuracy</b> the same as 'fit' but for actual new data and not on training data.</li>
+    <li><b>epoch</b> how many iterations the machine learning algorythm should do.</li>
+    <li><b>and many more...</b></li>
+</ul>
+
+<h3>All of these unfamiliar words and terms can very overwhelming.</h3>
+<p>The issue is that there are very few resources that are coherent, 
+    maybe you attempt to do one machine learning project using one naming convention and then when you complete it
+and move on to another one you're completely lost because this second person uses a completely different naming convention and techniques.</p>
+<p>A <b>very</b> typical - entry level problem is the MNIST problem. <br>
+the MNIST problem is a dataset of 70 000 images containing an even destribution of images of written numbers. <i>(0-9)</i></p>
+<p>I <b>highly</b> recommend this to anyone interested, however - this problem can be solved using very many different techniques.</p>
+<p>I can't count the amount of times I was thrown of because all of a sudden I was supposed to use convolution instead of linear regression according to 
+    some random video on YouTube and that guy on StackOverflow.
+It's important to note that while both of these techniques work, it's alot easier to get a hold of one of them at a time than both of them at the same time,
+they are very mathematically different.</p>
+
+<p>Conclusion being that while there is alot of scary words and terms, stick to the ones you are somewhat familiar with and dig deep into them. 
+    Don't overwhelm yourself just because <b> mr.2000 upvotes</b> on StackOverflow said it's <i> "better"</i>.</p>
+
+<h2>Recommended resources?</h2>
+<p>Now - while I think there are alot of great resources out there regarding machine learning, most if not all of them assume you have
+    some experience with it, especially with the main concepts. The issue with this that while alot of other dev - related things are somewhat transferable skills <br>
+    <i>"ok so this is how a class is defined in XYZ language..."</i> <br>
+    When it comes to machine learning most of it is pretty hard to imagine and there is not a lot of transferable skill, just try to imagine a 4 dimentional object... <br>
+    </p>
+    <p>This is why i recommend a payed course on Udemy! The primary reason for this is that they have coherent content that doesn't deviate a lot from their usual learning techniques
+    and naming convention. And alot of them are amazing teachers. <a target="_blank" href="https://www.udemy.com/course/deep-learning-tensorflow-2/">Here is a link to my favourite one by TheLazyProgrammer!</a>
+</p>
+
+<h2>Do you need to be a master at math - or is there a requirement?</h2>
+<p><b>No, you do not.</b> <br>However - it will be significantly easier to understand alot of the different techniques <i>(like LSTM, GNU, RNN)</i> if you a solid understanding of more advanced algebra.</p>
+<p>Also have to mention that most of the math going on inside a neural network or a machine learning algorythm is vector multiplication or addition. 
+    Having atleast a decent understanding of Linear Algebra will help understand how they work, and in particular: <b>how they look.</b></p>
+<p>I personaly did not have a great understanding of either these concepts when I started learning, and it's 100% possible to 'pick up on' as you learn along.
+    <i>Though this requires added effort to learn a significant enough amount.</i>
+</p>
+
+
+{% endblock content %}
