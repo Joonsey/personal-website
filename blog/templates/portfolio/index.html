@@ -89,17 +89,23 @@
             </div>
         </div>
         <div class="work-container">
-            <div class="work-content"><a href="{% url 'article' 1 %}">
+            <div class="work-content"><a href="{% url 'article' 'a-beginners-endevour-into_machine-learning' %}">
+                <div class="img-wrapper">
+                    <img src="{% static 'portfolio/imgs/image1.jpg' %}" alt="">
+                </div>
                 <h1>A beginners endevour into Machine Learning</h1>
-                <img src="{% static 'portfolio/imgs/image1.jpg' %}" alt="">
             </a></div>
-            <div class="work-content"><a href="{% url 'article' 2 %}">
-                <h1 class="second-color-txt">Ticketer - A ticket support system</h1>
-                <img src="{% static 'portfolio/imgs/image2.jpg' %}" alt="">
+            <div class="work-content"><a href="{% url 'article' 'ticketer-a-ticket-support-system' %}">
+                <div class="img-wrapper">
+                    <img src="{% static 'portfolio/imgs/image2.jpg' %}" alt="">
+                </div>
+                <h1>Ticketer - A ticket support system</h1>
             </a></div>
-            <div class="work-content"><a href="{% url 'article' 3 %}">
+            <div class="work-content"><a href="{% url 'article' 'is-server-hosting-easy' %}">
+                <div class="img-wrapper">
+                    <img src="{% static 'portfolio/imgs/image3.jpg' %}" alt="">
+                </div>
                 <h1>Is server hosting easy?</h1>
-                <img src="{% static 'portfolio/imgs/image3.jpg' %}" alt="">
             </a></div>
         </div>
     </div>
