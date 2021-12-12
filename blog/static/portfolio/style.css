@@ -176,10 +176,12 @@ img {
     transition: all 0.5s ease;
 }
 
+/* on hover effect animation */
 img:focus, img:hover {
     opacity:33%;
     transform: scale(1.2)
 }
+
 
 
 .img-wrapper {
