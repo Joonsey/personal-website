@@ -8,3 +8,4 @@ venv
 pull.sh
 static/*
 __pychache__
+__pychache__/*
