@@ -1,4 +1,43 @@
 {% extends "article/base.html" %}
 {% block content %}
-<h1>WIP</h1>
+<h1>I made a ticket support system!</h1>
+
+<p><b>Ticketer</b> is a ticket support system built on top of a Discord API.</p>
+<h2>What is a ticket support system?</h2>
+<p>A ticket support system is a piece of software that will allow a user <i>(someone who works in support)</i>
+    to file a ticket into the system for it to be stored and reviewed at a later date.
+</p>
+<h3>Well that doesn't sound very complicated?</h3>
+<p>It isn't, however I made it on the Discord API for the people who uses it to have easy access and
+    to avoid authetication and user hierarchy requirements. It's plug-and-play!
+</p>
+<p>The main challenge with these software types are that they can be convoluted to use,
+    it's usually some strange website with TONS of uncanny features and strange user interfaces.
+</p>
+<p>By using Discord I avoid the majority of these challenges, it takes chat messages as commmands and arguments
+    to commit queries and changes to a SQL database. It also has a some QoL features like:
+    <b>Automated ID generation</b>, <b>specific or dynamic queries</b>, <b>embedded messages</b>, <b>automatic chat cleaner</b> & <b>Database wipe function</b> to name a few 
+</p>
+<h2>Ok that's cool, but how does it work?</h2>
+<p>It is just a SQL database containing a table called "tickets".</p>
+<p>The structure of the table is something like: id | date | context | author | solved</p>
+<p>The ID is proceduraly generated, it will always be set to one higher than the highest ID in the database.
+    the date will also be proceduraly generated based on the current time and date when the ticket is created.
+    <br>Context is the only argument that has to be sent to Ticketer, it will contain the information about the problem from the customer, and what was done to try to solve it.
+</p>
+<p>Now the 'Author' parameter is automatically determined by who sends the message on Discord.
+    this can be either with their current Discord name/alias, or it can be their Discord ID.
+</p>
+<h4>This is where another problem arises.</h4>
+<p>The discord ID is a large number and won't really help us tell who sendt the message, if we where to recieve that.
+    But if we use the Discord name/alias it won't be consistent, because people can simply change their name over time, and alot of people semi-frequently do.
+</p>
+<p>My idea of a solution to this:
+    <ol>
+        <li>Use Discord ID and map the ID's to their names before entering them to the database, using a dictionary or hashmap.</li>
+        <li>Just use Discord name/alias and hope for the best.</li>
+    </ol>
+</p>
+<p>I am no longer actively working on developing it, but if you want you can take a look <a href="http://https://github.com/Joonsey/Ticketer" target="_blank" rel="noopener noreferrer">at the repository</a></p>
+<p>Be mindful he is <b>not</b> currently configured to run the database in memory. <i>This can be changed in the database.py file</i></p>
 {% endblock content %}
