@@ -12,9 +12,11 @@
             {% if idea.votes > 1 %}
             <form action="{% url 'increase-vote' idea.pk %}" method=POST>
                 <button class="emph" id="approve-btn" type="submit">votes: {{ idea.votes }}</button>
-                </form>
+            </form>
             {% else %}
-            <!-- <a href="{% url 'increase-vote' %}" class='emph'>vote:  {{ idea.votes }}</a> -->
+            <form action="{% url 'increase-vote' idea.pk %}" method=POST>
+                <button class="emph" id="approve-btn" type="submit">vote: {{ idea.votes }}</button>
+            </form>
             {% endif %}
         </div>
         <p class="subtle">On {{ idea.date_posted }}</p>
