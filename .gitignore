@@ -6,7 +6,6 @@ db.sqlite3
 venv/*
 venv
 pull.sh
-static/*
 __pychache__
 __pychache__/*
 /__pychache__/*

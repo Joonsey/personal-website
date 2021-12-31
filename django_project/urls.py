@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('', include("portfolio.urls")),
-    path('article/', include("article.urls"))
+    path('article/', include("article.urls")),
+    path('WIP/', include("crowdfounder.urls"))
 ]
 
 if settings.DEBUG:
