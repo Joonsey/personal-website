@@ -1,0 +1,18 @@
+{% extends "crowdfounder/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend></legend>
+            {{form|crispy}}
+        </fieldset>
+        <div class="">
+            <button type="submit">Post</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+    

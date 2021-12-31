@@ -32,7 +32,12 @@ SECRET_KEY = config['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+from sys import platform
+
+if platform != 'linux':
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = ["139.162.160.227","jaes.life",'127.0.0.1']
 
