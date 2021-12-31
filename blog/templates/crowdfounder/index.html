@@ -9,15 +9,13 @@
         <h2>{{ idea.header }}</h2>
         <div class="object-sub">
             <p>{{ idea.description }}</p>
+            <form action="{% url 'increase-vote' idea.pk %}" method=POST>
             {% if idea.votes > 1 %}
-            <form action="{% url 'increase-vote' idea.pk %}" method=POST>
                 <button class="emph" id="approve-btn" type="submit">votes: {{ idea.votes }}</button>
-            </form>
             {% else %}
-            <form action="{% url 'increase-vote' idea.pk %}" method=POST>
                 <button class="emph" id="approve-btn" type="submit">vote: {{ idea.votes }}</button>
-            </form>
             {% endif %}
+        </form>
         </div>
         <p class="subtle">On {{ idea.date_posted }}</p>
         
