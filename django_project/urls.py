@@ -24,7 +24,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('', include("portfolio.urls")),
     path('article/', include("article.urls")),
-    path('WIP/', include("crowdfounder.urls"))
+    #path('WIP/', include("crowdfounder.urls"))
 ]
 
 if settings.DEBUG:
