@@ -6,10 +6,12 @@
 
     /* RED AND SLATE THEME */
 
-    --main-bg-theme: rgb(49, 49, 49); 
-    --second-color: rgb(240, 99, 99); 
+    --main-bg-theme: #00060b; 
+    --second-color: #c72424; 
     --second-bg-color: #070B0D; 
     
+    --third-color: #FA7268;
+
     /* YELLOW AND GRAY THEME */
     
     /* --main-bg-theme: #666E73;
@@ -37,7 +39,10 @@
     margin:0;
     height:100vh;
     overflow-x: hidden;
-    background-image: radial-gradient(var(--main-bg-theme), var(--second-bg-color)) ;
+    /* background-image: radial-gradient(var(--main-bg-theme), var(--second-bg-color)) ; */
+    background-image: url('imgs/layered-waves-haikei.svg');
+    background-size: cover ;
+
 }
 
 .redacted {
@@ -83,11 +88,12 @@ nav ul li{
 
 nav ul li a{
     text-align: center;
-    color: var(--second-color)
+    color: var(--main-bg-theme)
+
 }
 
 nav ul li a:hover {
-    color: var(--second-color);
+    color: var(--main-bg-theme);
 }
 
 nav {
@@ -99,8 +105,9 @@ nav {
     left: 50%;
     transform: translateX(-50%);
 }
-/* ABOUT AND SECTION DEFINITION */
 
+/* ABOUT AND SECTION DEFINITION */
+/* 
 .section, .section-header, .about-text {
     margin: 0;
     padding: 0;
@@ -115,6 +122,8 @@ nav {
 .section-header {
     height: 100vh;
     background-color: var(--second-color);
+    background-image: url('imgs/blob-scene-haikei.svg');
+    background-size: cover;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -156,10 +165,10 @@ nav {
     color: var(--main-bg-theme);
 }
 
-/* WORK SECTION DESIGN */
+WORK SECTION DESIGN
 .work-container {
     width: 50%;
-    /* background-color: var(--second-bg-color); */
+    background-color: var(--second-bg-color);
     display:flex;
     flex-direction: column;
 }
@@ -176,7 +185,7 @@ img {
     transition: all 0.5s ease;
 }
 
-/* on hover effect animation */
+on hover effect animation
 img:focus, img:hover {
     opacity:33%;
     transform: scale(1.2)
@@ -214,13 +223,13 @@ img:focus, img:hover {
 }
 
 
-/* CONTACT SECTION */
+CONTACT SECTION
 
 .contact-container {
     height: auto;
     background-color: var(--main-bg-theme);
     width: 50%;
-    /* text-align: center; */
+    text-align: center;
     padding:24px;
     padding-top: 150px;
 }
@@ -298,7 +307,7 @@ img:focus, img:hover {
 }
 
 
-/* MEDIA QUERY */
+MEDIA QUERY
 @media screen and (max-width: 1000px) {
 
     .section-header, .about-text, .work-container, .contact-container{
@@ -332,4 +341,4 @@ img:focus, img:hover {
         width: 200px;
     }
 
-}
+} */
