@@ -2,7 +2,6 @@
     --font-size: 36px
 }
 
-
 * {
     margin:0;
     padding:0;
@@ -13,9 +12,26 @@ body {
     background-color: #0B0909;
 }
 
+.status {
+    display:flex
+}
+.🍎 {
+    padding-left: 200px;
+}
+.🍎 svg {
+    margin-right: 15px;
+    height: var(--font-size);
+    transform: translateY(-5px);
+}
+
+.left-status-bit {
+    text-align: right;
+}
 .text-container {
     display: flex;
     justify-content: center;
+    height:85vh;
+    width: 100vw;
 }
 
 .text-container span.sentence {
@@ -25,18 +41,16 @@ body {
 }
 
 .span-container {
-    width: 65vw;
+    width: 95vw;
     padding: 100px 0;
     height: 100%;
 }
-
 
 .shabang {
     opacity: 100%;
     color:rgba(255, 255, 255, 0.33);
     font-family: Consolas,monaco,monospace;
 }
-
 
 .input-cursor {
     display: inline-block;
@@ -47,7 +61,9 @@ body {
     animation: blink .6s linear infinite alternate;
 }
 
-
+#active {
+    color:rgb(8, 207, 8)
+}
 
 
 @keyframes blink {
