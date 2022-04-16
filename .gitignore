@@ -11,3 +11,4 @@ __pychache__
 __pychache__/*
 /__pychache__/*
 venv/
+*.pyc
