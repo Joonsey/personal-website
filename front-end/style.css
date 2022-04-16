@@ -1,0 +1,53 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B0909;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container span.sentence {
+    font-size: 36px;
+    color: #ffffff;
+    font-family: Consolas,monaco,monospace;
+}
+
+.span-container {
+    width: 65vw;
+    padding: 100px 0
+}
+
+
+.shabang {
+    opacity: 100%;
+    color:rgba(255, 255, 255, 0.33);
+    font-family: Consolas,monaco,monospace;
+}
+
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+
+
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}

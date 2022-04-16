@@ -36,25 +36,23 @@ from sys import platform
 
 if platform != 'linux':
     DEBUG = True
+    ALLOWED_HOSTS = ["139.162.160.227","jaes.life",'127.0.0.1']
 else:
     DEBUG = False
+    ALLOWED_HOSTS = ["localhost", "139.162.160.227","jaes.life",'127.0.0.1']
 
-ALLOWED_HOSTS = ["139.162.160.227","jaes.life",'127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'article.apps.ArticleConfig',
-    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-    'crowdfounder.apps.Config'
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
