@@ -43,7 +43,7 @@ var scroll_event_amount: number = 0;
 
 const opener_text_element: HTMLElement = document.getElementById("opener_text")!;
 
-async function typewrite_text(DOM_element: HTMLElement, text: string[], interval: number = 75, text_index: number = 0) {
+async function typewrite_text(DOM_element: HTMLElement, text: string[], interval: number = 75, text_index: number = 0, ready: boolean = false) {
     var i: number = 0
     var text_len: number = text.length
     
@@ -54,12 +54,12 @@ async function typewrite_text(DOM_element: HTMLElement, text: string[], interval
                     DOM_element.innerHTML += character
                     i++;
                     setTimeout(write, interval)
-                    if (character == text[text_index].charAt(text[text_index].length-1) && text_index == text_len-1){
+                    if (ready && i == text[text_index].length && text_index == text_len-1){
                         make_ready()
                     }else {}
                 }else {
                     DOM_element.innerHTML += '<br> ' +SYS_PREFIX
-                    typewrite_text(DOM_element, text, interval, text_index+1)
+                    typewrite_text(DOM_element, text, interval, text_index+1, ready)
                     
                 }
         }
@@ -93,7 +93,7 @@ document.addEventListener('wheel',on_scroll_event_handler)
 function main_loop() {
     switch (scroll_event_amount) {
         case 0:
-            typewrite_text(opener_text_element, opener_text)
+            typewrite_text(opener_text_element, opener_text, 75, 0, true)
             break
         case 1:
             typewrite_text(opener_text_element, status_request_text)

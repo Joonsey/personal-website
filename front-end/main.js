@@ -48,7 +48,7 @@ const status_resposne_text = `
 var ready = false;
 var scroll_event_amount = 0;
 const opener_text_element = document.getElementById("opener_text");
-function typewrite_text(DOM_element, text, interval = 75, text_index = 0) {
+function typewrite_text(DOM_element, text, interval = 75, text_index = 0, ready = false) {
     return __awaiter(this, void 0, void 0, function* () {
         var i = 0;
         var text_len = text.length;
@@ -59,14 +59,14 @@ function typewrite_text(DOM_element, text, interval = 75, text_index = 0) {
                     DOM_element.innerHTML += character;
                     i++;
                     setTimeout(write, interval);
-                    if (character == text[text_index].charAt(text[text_index].length - 1) && text_index == text_len - 1) {
+                    if (ready && i == text[text_index].length && text_index == text_len - 1) {
                         make_ready();
                     }
                     else { }
                 }
                 else {
                     DOM_element.innerHTML += '<br> ' + SYS_PREFIX;
-                    typewrite_text(DOM_element, text, interval, text_index + 1);
+                    typewrite_text(DOM_element, text, interval, text_index + 1, ready);
                 }
             }
             write();
@@ -102,7 +102,7 @@ document.addEventListener('wheel', on_scroll_event_handler);
 function main_loop() {
     switch (scroll_event_amount) {
         case 0:
-            typewrite_text(opener_text_element, opener_text);
+            typewrite_text(opener_text_element, opener_text, 75, 0, true);
             break;
         case 1:
             typewrite_text(opener_text_element, status_request_text);
