@@ -1,3 +1,8 @@
+:root {
+    --font-size: 36px
+}
+
+
 * {
     margin:0;
     padding:0;
@@ -11,18 +16,18 @@ body {
 .text-container {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .text-container span.sentence {
-    font-size: 36px;
+    font-size: var(--font-size);
     color: #ffffff;
     font-family: Consolas,monaco,monospace;
 }
 
 .span-container {
     width: 65vw;
-    padding: 100px 0
+    padding: 100px 0;
+    height: 100%;
 }
 
 
@@ -36,9 +41,9 @@ body {
 .input-cursor {
     display: inline-block;
     width: 2px;
-    height: 42px;
+    height: var(--font-size);
     background-color: white;
-    margin-left: 8px;
+    margin-left: 2px;
     animation: blink .6s linear infinite alternate;
 }
 
