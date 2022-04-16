@@ -9,6 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const SYS_PREFIX = ':~$ '; // Remember to change this in the HTML as well.
+var cursor = true;
+const blinker_element = document.getElementsByClassName('input-cursor');
 const opener_text = ["sudo systemctl enable Jae", "sudo systemctl start Jae"];
 const status_request_text = ['sudo systemctl status Jae'];
 const status_resposne_text = `
@@ -74,6 +76,16 @@ function typewrite_text(DOM_element, text, interval = 75, text_index = 0) {
 function make_ready() {
     ready = true;
 }
+function toggle_cursor_blinker() {
+    if (cursor) {
+        blinker_element[0].classList.remove("input-cursor");
+        cursor = false;
+    }
+    else {
+        blinker_element[0].classList.add("input-cursor");
+        cursor = true;
+    }
+}
 function on_scroll_event_handler() {
     return __awaiter(this, void 0, void 0, function* () {
         if (ready) {
@@ -97,6 +109,7 @@ function main_loop() {
             setTimeout(() => { opener_text_element.innerHTML += status_resposne_text; }, 4000);
             ready = false;
             setTimeout(make_ready, 15000);
+            toggle_cursor_blinker();
             break;
     }
 }

@@ -1,8 +1,9 @@
 const SYS_PREFIX: string = ':~$ ' // Remember to change this in the HTML as well.
+var cursor: boolean = true
 
+const blinker_element: HTMLCollection = document.getElementsByClassName('input-cursor')
 const opener_text: string[] = ["sudo systemctl enable Jae", "sudo systemctl start Jae"]
 const status_request_text: string[] = ['sudo systemctl status Jae']
-
 const status_resposne_text: string = 
     `
     <span class="status">
@@ -38,7 +39,7 @@ const status_resposne_text: string =
     `;
 
 var ready: boolean = false
-var scroll_event_amount: number = 0
+var scroll_event_amount: number = 0;
 
 const opener_text_element: HTMLElement = document.getElementById("opener_text")!;
 
@@ -69,6 +70,11 @@ async function typewrite_text(DOM_element: HTMLElement, text: string[], interval
 function make_ready(){
     ready = true
 }
+function toggle_cursor_blinker(){
+    if(cursor) {blinker_element[0].classList.remove("input-cursor"); cursor = false}
+    else{blinker_element[0].classList.add("input-cursor"); cursor = true}
+    
+}
 
 
 async function on_scroll_event_handler() {
@@ -94,6 +100,7 @@ function main_loop() {
             setTimeout(() => {opener_text_element.innerHTML += status_resposne_text}, 4000)
             ready = false
             setTimeout(make_ready, 15000)
+            toggle_cursor_blinker()
             break
         }
 }
